@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jarsy Ganj Admin Dashboard</title>
+    <link rel="stylesheet" href="admin-style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <aside class="admin-sidebar" aria-label="Admin Dashboard Sidebar Navigation">
+        <h2>Jarsy Ganj Admin</h2>
+        <nav>
+            <ul>
+                <li><a href="#" class="sidebar-link active" data-section="orders" aria-current="page">Orders</a></li>
+                <li><a href="#" class="sidebar-link" data-section="completed-orders">Completed Orders</a></li>
+                <li><a href="#" class="sidebar-link" data-section="feedback">Feedback</a></li>
+                <li><a href="#" class="sidebar-link" id="admin-logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="admin-main-content">
+        <h1>Welcome, Admin!</h1> 
+        <section id="orders-section" class="dashboard-section active-section" aria-labelledby="recent-orders-title">
+            <h3 id="recent-orders-title">Active Orders</h3>
+            <table class="data-table" id="ordersTable" role="table" aria-label="Active Orders Table">
+                <thead>
+                    <tr>
+                        <th scope="col">Order ID</th>
+                        <th scope="col">Customer Name</th>
+                        <th scope="col">Mobile</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td colspan="8" style="text-align: center;">Loading active orders...</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="completed-orders-section" class="dashboard-section" style="display: none;" aria-labelledby="completed-orders-title">
+            <h3 id="completed-orders-title">Completed Orders Archive</h3>
+            <table class="data-table" id="completedOrdersTable" role="table" aria-label="Completed Orders Table">
+                <thead>
+                    <tr>
+                        <th scope="col">Order ID</th>
+                        <th scope="col">Customer Name</th>
+                        <th scope="col">Mobile</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Actions</th> </tr>
+                </thead>
+                <tbody>
+                    <tr><td colspan="8" style="text-align: center;">Loading completed orders...</td></tr> </tbody>
+            </table>
+        </section>
+
+        <section id="feedback-section" class="dashboard-section" style="display: none;" aria-labelledby="customer-feedback-title">
+            <h3 id="customer-feedback-title">Customer Feedback</h3>
+            <div class="feedback-tabs" role="tablist" aria-label="Feedback Status Tabs">
+                <button class="feedback-tab-btn active-tab" data-tab="Unread" role="tab" aria-selected="true" aria-controls="feedbackTable">Unread</button>
+                <button class="feedback-tab-btn" data-tab="Read" role="tab" aria-selected="false" aria-controls="feedbackTable">Read</button>
+            </div>
+            <table class="data-table" id="feedbackTable" role="table" aria-label="Customer Feedback Table">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Subject</th>
+                        <th scope="col">Message</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td colspan="7" style="text-align: center;">Loading feedback...</td></tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="admin-script.js"></script> 
+</body>
+</html>

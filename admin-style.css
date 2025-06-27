@@ -1,0 +1,362 @@
+/* admin/admin_style.css */
+
+/* Google Fonts - Poppins for modern look */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Define colors to match website's style.css (if not already defined globally or inherited) */
+:root {
+    --primary-color: #001F3F; /* Deep Blue */
+    --secondary-color: #FF4500; /* Sporty Orange */
+    --accent-light: #F0F0F0; /* Light Grey */
+    --text-dark: #333333;
+    --text-light: #FFFFFF;
+    --border-color: #ddd;
+}
+
+
+/* General Admin Layout */
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--accent-light); /* Lighter background for admin */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    color: var(--text-dark);
+}
+.admin-sidebar {
+    width: 250px;
+    background-color: var(--primary-color); /* Deep Blue/Dark Grey */
+    color: var(--text-light);
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+.admin-sidebar h2 {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 30px;
+    font-size: 1.8em;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 15px;
+}
+.admin-sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.admin-sidebar nav ul li {
+    margin-bottom: 10px;
+}
+.admin-sidebar nav ul li a {
+    display: block;
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 12px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 1.1em;
+}
+.admin-sidebar nav ul li a:hover,
+.admin-sidebar nav ul li a.active {
+    background-color: var(--secondary-color); /* Sporty Orange - secondary color */
+}
+
+.admin-main-content {
+    flex-grow: 1;
+    padding: 30px;
+    background-color: var(--accent-light);
+}
+.admin-main-content h1 {
+    color: var(--primary-color); /* Deep Blue - primary color */
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 15px;
+}
+
+/* Section Specific Styles (Dashboard, Orders, Feedback, Completed Orders) */
+.dashboard-section {
+    background-color: var(--text-light);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+.dashboard-section h3 {
+    color: var(--primary-color); /* Primary color */
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    border-bottom: 1px solid var(--border-color); /* Light border */
+    padding-bottom: 10px;
+}
+
+/* Tabs for Feedback Section */
+.feedback-tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+.feedback-tabs button {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: var(--text-dark);
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    outline: none;
+}
+.feedback-tabs button.active-tab {
+    color: var(--secondary-color); /* Secondary color */
+    border-bottom: 2px solid var(--secondary-color);
+    font-weight: bold;
+}
+.feedback-tabs button:hover {
+    color: var(--secondary-color);
+}
+
+/* Table Styles for Orders/Feedback */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.95em;
+}
+.data-table th, .data-table td {
+    border: 1px solid var(--border-color);
+    padding: 12px;
+    text-align: left;
+    vertical-align: top; /* Align content to top for multi-line cells */
+}
+.data-table th {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    font-weight: bold;
+}
+.data-table tr:nth-child(even) {
+    background-color: var(--accent-light);
+}
+.data-table tr:hover {
+    background-color: #f1f1f1;
+}
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    font-size: 0.85em;
+    display: inline-block; /* Allows padding/margin */
+}
+/* Status colors based on your style.css primary/secondary */
+.status-new { background-color: #007bff; } /* Blue */
+.status-pending { background-color: #F39C12; } /* Orange */
+.status-shipped { background-color: #2980B9; } /* Light Blue */
+.status-completed { background-color: #27AE60; } /* Green */
+.status-cancelled { background-color: #E74C3C; } /* Red */
+.status-unread { background-color: var(--secondary-color); } /* Secondary color, for unread feedback */
+.status-read { background-color: #6c757d; } /* Grey, for read feedback */
+
+
+/* Actions Column Styling */
+.actions-cell button,
+.actions-cell select {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-bottom: 5px; /* For stacking on mobile */
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+.actions-cell .change-status-btn {
+    background-color: var(--primary-color); /* Primary color */
+    color: white;
+}
+.actions-cell .change-status-btn:hover {
+    background-color: #001A33;
+    transform: translateY(-1px);
+}
+.actions-cell .delete-btn {
+    background-color: #E74C3C; /* Red for delete */
+    color: white;
+}
+.actions-cell .delete-btn:hover {
+    background-color: #C0392B;
+    transform: translateY(-1px);
+}
+.actions-cell .mark-read-btn {
+    background-color: #27AE60; /* Green for mark read */
+    color: white;
+}
+.actions-cell .mark-read-btn:hover {
+    background-color: #229954;
+    transform: translateY(-1px);
+}
+.actions-cell select {
+    background-color: var(--accent-light);
+    border: 1px solid var(--border-color);
+    min-width: 120px; /* Ensure dropdown is wide enough */
+}
+.actions-cell select:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px rgba(255, 69, 0, 0.2);
+    outline: none;
+}
+
+/* Admin Login Page Specific Styles */
+.login-container {
+    background-color: var(--text-light);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    display: flex; /* For centering content vertically */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Allow content to dictate height */
+    margin: auto; /* For centering horizontally */
+    min-height: 100vh; /* Ensure login container takes full height for centering */
+}
+.login-container h2 {
+    color: var(--secondary-color); /* Jarsy Ganj Brand Red - Secondary Color */
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    border-bottom: none; /* Remove border from H2 in login */
+    padding-bottom: 0;
+}
+.login-form {
+    width: 100%;
+}
+.login-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+.login-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: calc(100% - 24px); /* Adjust for padding and border */
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1.1em;
+    box-sizing: border-box; /* Include padding/border in width */
+    background-color: var(--accent-light);
+}
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+    border-color: var(--primary-color); /* Primary color */
+    box-shadow: 0 0 0 3px rgba(0, 31, 63, 0.2);
+    outline: none;
+}
+.login-button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-color); /* Primary color */
+    color: var(--text-light);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+}
+.login-button:hover {
+    background-color: #001A33;
+    transform: translateY(-2px);
+}
+.login-message {
+    color: #E74C3C; /* Red for error messages */
+    margin-top: 15px;
+    font-weight: bold;
+    display: none; /* Hidden by default */
+}
+
+/* Mobile responsive */
+@media (max-width: 900px) {
+    body {
+        flex-direction: column;
+    }
+    .admin-sidebar {
+        width: 100%;
+        height: auto;
+        padding: 15px 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .admin-sidebar h2 {
+        display: none;
+    }
+    .admin-sidebar nav ul {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .admin-sidebar nav ul li {
+        margin: 5px 10px;
+    }
+    .admin-sidebar nav ul li a {
+        padding: 8px 12px;
+        font-size: 1em;
+    }
+    .admin-main-content {
+        padding: 20px;
+    }
+    /* Table responsiveness */
+    .data-table, .data-table tbody, .data-table tr, .data-table td, .data-table th {
+        display: block;
+    }
+    .data-table thead {
+        display: none;
+    }
+    .data-table tr {
+        margin-bottom: 15px;
+        border: 1px solid var(--border-color);
+        border-radius: 5px;
+    }
+    .data-table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+    .data-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: calc(50% - 20px);
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        color: var(--text-dark);
+    }
+    .actions-cell {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-top: 1px solid var(--border-color);
+    }
+    .actions-cell button, .actions-cell select {
+        width: auto;
+        flex-grow: 1;
+    }
+    .feedback-tabs {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .feedback-tabs button {
+        margin: 5px;
+    }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Jarsy Ganj</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Jarsy Ganj</a>
+            </div>
+            <nav class="main-nav">
+                <div class="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                    <li><a href="cart.html" class="active"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Your Shopping Cart</h1>
+                <p>Review your selected items before checkout.</p>
+            </div>
+        </section>
+
+        <section class="content-section cart-section">
+            <div class="container">
+                <div class="cart-content-wrapper">
+                    <div class="cart-items">
+                        <div class="empty-cart-message" style="display: none;">
+                            <i class="fas fa-shopping-basket fa-3x"></i>
+                            <p>Your cart is empty. Let's find some awesome jerseys!</p>
+                            <a href="products.html" class="btn btn-primary shop-from-cart-btn">Start Shopping!</a>
+                        </div>
+                    </div>
+
+                    <div class="cart-summary">
+                        <h2>Order Summary</h2>
+                        <div class="summary-row">
+                            <span>Subtotal:</span>
+                            <span class="summary-value">৳0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Delivery Charge:</span>
+                            <span class="summary-value">৳120.00</span>
+                        </div>
+                        <div class="summary-row total-row">
+                            <span>Total:</span>
+                            <span class="summary-value total-amount">৳120.00</span>
+                        </div>
+                        <a href="checkout.html" class="btn btn-primary btn-checkout">Proceed to Checkout</a>
+                        <a href="products.html" class="btn btn-outline continue-shopping-btn">Continue Shopping</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>Jarsy Ganj</h3>
+                    <p>Your one-stop shop for high-quality sports jerseys.</p>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="delivery-returns.html">Delivery & Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@jarsyganj.com</p>
+                    <p>Phone: +8801917757634</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 Jarsy Ganj. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

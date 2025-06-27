@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Jarsy Ganj</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Jarsy Ganj</a>
+            </div>
+            <nav class="main-nav">
+                <div class="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                    <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Checkout</h1>
+                <p>Please fill in your details to complete your order.</p>
+            </div>
+        </section>
+
+        <section class="content-section checkout-section">
+            <div class="container">
+                <div class="checkout-grid">
+                    <div class="shipping-payment-details">
+                        <h2>Shipping Information</h2>
+                        <form action="#" method="POST" class="checkout-form">
+                            <div class="form-group">
+                                <label for="full-name">Full Name *</label>
+                                <input type="text" id="full-name" name="fullName" required placeholder="Enter your full name">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone-number">Phone Number *</label>
+                                <input type="tel" id="phone-number" name="phoneNumber" required placeholder="e.g., 017XXXXXXXX">
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Full Address *</label>
+                                <textarea id="address" name="address" rows="4" placeholder="Street, City, District, Postal Code" required></textarea>
+                            </div>
+
+                            <h2>Payment Method</h2>
+                            <div class="payment-options">
+                                <div class="radio-group">
+                                    <input type="radio" id="cod" name="paymentMethod" value="Cash on Delivery" checked>
+                                    <label for="cod">Cash on Delivery (COD)</label>
+                                </div>
+                                <div class="radio-group">
+                                    <input type="radio" id="bkash" name="paymentMethod" value="bKash">
+                                    <label for="bkash">bKash</label>
+                                </div>
+                                <div class="radio-group">
+                                    <input type="radio" id="nagad" name="paymentMethod" value="Nagad">
+                                    <label for="nagad">Nagad</label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-place-order">Place Order</button>
+                        </form>
+                    </div>
+
+                    <div class="order-summary-checkout">
+                        <h2>Order Summary</h2>
+                        <div class="summary-items-list">
+                            <div class="summary-item-placeholder">
+                                <p>No items in cart. Please add products from the shop page.</p>
+                            </div>
+                        </div>
+
+                        <div class="summary-row subtotal-row">
+                            <span>Subtotal:</span>
+                            <span class="summary-value">৳0.00</span>
+                        </div>
+                        <div class="summary-row delivery-row">
+                            <span>Delivery Charge:</span>
+                            <span class="summary-value">৳120.00</span>
+                        </div>
+                        <div class="summary-row total-row final-total">
+                            <span>Total:</span>
+                            <span class="summary-value total-amount-checkout">৳120.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>Jarsy Ganj</h3>
+                    <p>Your one-stop shop for high-quality sports jerseys.</p>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="delivery-returns.html">Delivery & Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@jarsyganj.com</p>
+                    <p>Phone: +8801917757634</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 Jarsy Ganj. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // --- Product Data (Client-side simulation) ---
     const allProducts = [
-        { id: 'prod001', name: 'Football Team Jersey', price: 39.99, imageUrl: 'https://via.placeholder.com/300x300?text=Football+Jersey' },
+        { id: 'prod001', name: 'Football Team Jersey', price: 39.99, imageUrl: 'https://drive.google.com/file/d/1A1JZ0uSaSIIQgHxUaGyp-wlR-3x6Nzf6/view?usp=drivesdk' },
         { id: 'prod002', name: 'Cricket Team Jersey', price: 35.99, imageUrl: 'https://via.placeholder.com/300x300?text=Cricket+Jersey' },
         { id: 'prod003', name: 'Basketball Team Jersey', price: 42.99, imageUrl: 'https://via.placeholder.com/300x300?text=Basketball+Jersey' },
         { id: 'prod004', name: 'Team A Home Jersey', price: 45.00, imageUrl: 'https://via.placeholder.com/300x300?text=Team+A+Jersey' },

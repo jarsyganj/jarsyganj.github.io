@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jarsy Ganj Admin Login</title>
+    <link rel="stylesheet" href="admin-style.css"> <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container" role="main" aria-label="Admin Login Form">
+        <h2>Jarsy Ganj Admin Login</h2>
+        <form class="login-form" id="adminLoginForm">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required aria-required="true" autocomplete="username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required aria-required="true" autocomplete="current-password">
+            </div>
+            <button type="submit" class="login-button">Login</button>
+            <p class="login-message" id="loginMessage" role="alert" aria-live="assertive" style="display: none;"></p>
+        </form>
+    </div>
+
+    <script src="admin-script.js"></script> 
+</body>
+</html>
